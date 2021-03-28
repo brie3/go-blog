@@ -1,0 +1,12 @@
+{{define "main"}}
+    {{template "header" .}}
+    {{range .Posts}}
+            <article class="well">
+                <h3>{{.Title}}</h3>
+                <small>Created on {{.Created.Format "2-01-2006 15:04:05"}} by {{.Author}}</small>
+                <p>{{.Content}}</p>
+                <a class="btn btn-outline-primary" href="api/v1/posts/{{.ID}}">Read More</a>
+            </article>
+    {{end}}
+    {{template "footer"}}
+{{end}}
