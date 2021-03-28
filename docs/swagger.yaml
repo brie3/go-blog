@@ -37,7 +37,7 @@ paths:
     get:
       description: returns index page with max 20 posts
       produces:
-      - text/html
+        - text/html
       responses:
         "200":
           description: OK
@@ -52,7 +52,7 @@ paths:
     get:
       description: Returns swagger's json docs
       produces:
-      - application/json
+        - application/json
       responses:
         "200":
           description: ok
@@ -63,15 +63,15 @@ paths:
     post:
       description: create new post and return json
       parameters:
-      - description: title, author, content
-        in: body
-        name: post
-        required: true
-        schema:
-          $ref: '#/definitions/models.Post'
-          type: object
+        - description: title, author, content
+          in: body
+          name: post
+          required: true
+          schema:
+            $ref: "#/definitions/models.Post"
+            type: object
       produces:
-      - application/json
+        - application/json
       responses:
         "200":
           description: OK
@@ -85,23 +85,23 @@ paths:
   /api/v1/posts/{id}:
     delete:
       consumes:
-      - application/json
+        - application/json
       description: deletes a post by id
       parameters:
-      - description: id
-        in: path
-        name: id
-        required: true
-        type: string
-      - description: id
-        in: body
-        name: post
-        required: true
-        schema:
-          $ref: '#/definitions/models.Post'
-          type: object
+        - description: id
+          in: path
+          name: id
+          required: true
+          type: string
+        - description: id
+          in: body
+          name: post
+          required: true
+          schema:
+            $ref: "#/definitions/models.Post"
+            type: object
       produces:
-      - application/json
+        - application/json
       responses:
         "200":
           description: OK
@@ -110,23 +110,23 @@ paths:
       summary: deletes a post by id
     put:
       consumes:
-      - application/json
+        - application/json
       description: renew post by id
       parameters:
-      - description: id
-        in: path
-        name: id
-        required: true
-        type: string
-      - description: title, author, content
-        in: body
-        name: post
-        required: true
-        schema:
-          $ref: '#/definitions/models.Post'
-          type: object
+        - description: id
+          in: path
+          name: id
+          required: true
+          type: string
+        - description: title, author, content
+          in: body
+          name: post
+          required: true
+          schema:
+            $ref: "#/definitions/models.Post"
+            type: object
       produces:
-      - application/json
+        - application/json
       responses:
         "200":
           description: OK
@@ -137,13 +137,13 @@ paths:
     get:
       description: returns page with edit post form
       parameters:
-      - description: id
-        in: path
-        name: id
-        required: true
-        type: string
+        - description: id
+          in: path
+          name: id
+          required: true
+          type: string
       produces:
-      - text/html
+        - text/html
       responses:
         "200":
           description: OK
@@ -158,7 +158,7 @@ paths:
     get:
       description: returns page with new post form
       produces:
-      - text/html
+        - text/html
       responses:
         "200":
           description: OK
@@ -173,13 +173,13 @@ paths:
     get:
       description: returns page with one post by id
       parameters:
-      - description: id
-        in: path
-        name: id
-        required: true
-        type: string
+        - description: id
+          in: path
+          name: id
+          required: true
+          type: string
       produces:
-      - text/html
+        - text/html
       responses:
         "200":
           description: OK
